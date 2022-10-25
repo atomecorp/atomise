@@ -2,13 +2,13 @@
 # frozen_string_literal: true
 
 if ARGV.include?('install')
-  # Dir.mkdir 'atome'
-  # Dir.chdir('atome') do
   %x(git clone https://github.com/atomecorp/atome.git )
   Dir.chdir('atome/vendor/assets/build/js/') do
     %x(git clone https://github.com/atomecorp/atome_third_parties_js.git third_parties)
     Dir.chdir('../../../../') do
       `bundle update; bundle install`
+      `gem build atome.gemspec`
+      `gem install atome`
       # ` rake test`
     end
   end

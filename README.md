@@ -16,7 +16,9 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+to install the atome development framework, just  type : 'atomize install' in you shell
+it will create a directory named 'atome' and also install the atome gem 
+Then refer to https://github.com/atomecorp/atome to use or develop the framework 
 
 ## Development
 
@@ -26,7 +28,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/atomize.
+Bug reports and pull requests are welcome on GitHub at https://github.com/atomecorp/atomize.
 
 ## License
 
