@@ -1,2 +1,2 @@
-# atomise
+# atomize
 The atome builder
