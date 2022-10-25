@@ -30,7 +30,6 @@ if ARGV.include?('install')
   end
   if ARGV.include?('run')
     Dir.chdir('atome/') do
-      puts "the path for rake is" +`pwd`
       `rake test`
     end
   end
