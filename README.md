@@ -17,6 +17,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 ## Usage
 
 to install the atome development framework, just  type : 'atomize install' in you shell
+If you want to install and run the app, just type type : 'atomize install run ' in you shell
 it will create a directory named 'atome' and also install the atome gem 
 Then refer to https://github.com/atomecorp/atome to use or develop the framework 
 
