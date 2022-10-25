@@ -5,11 +5,26 @@ if ARGV.include?('install')
   %x(git clone https://github.com/atomecorp/atome.git )
   Dir.chdir('atome/vendor/assets/build/js/') do
     %x(git clone https://github.com/atomecorp/atome_third_parties_js.git third_parties)
+  Dir.chdir('../../../../test/test_app/build/') do
+
+    Dir.mkdir('js')
+
+    Dir.chdir('js/') do
+      %x(git clone https://github.com/atomecorp/atome_third_parties_js.git third_parties)
+    end
+  end
     Dir.chdir('../../../../') do
+      Dir.mkdir('thepoil')
       `bundle update; bundle install`
       `gem build atome.gemspec`
       `gem install atome`
-      # ` rake test`
+
+    end
+  end
+  if ARGV.include?('run')
+    Dir.chdir('atome/') do
+      puts "the path for rake is" +`pwd`
+      `rake test`
     end
   end
 end
