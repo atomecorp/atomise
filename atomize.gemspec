@@ -1,22 +1,22 @@
 # frozen_string_literal: true
 
-require_relative "lib/atomize/version"
+require_relative 'lib/atomize/version'
 
 Gem::Specification.new do |spec|
-  spec.name = "atomize"
+  spec.name = 'atomize'
   spec.version = Atomize::VERSION
-  spec.authors = ["Jean-Eric Godard"]
+  spec.authors = ['Jean-Eric Godard']
   spec.email = ['jeezs@atopme.one']
 
   spec.summary = "atome's builder"
-  spec.description = "allow to install atome development framework"
+  spec.description = 'allow to install atome development framework'
   spec.homepage = 'https://atome.one'
-  spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.1"
+  spec.license = 'MIT'
+  spec.required_ruby_version = '>= 3.1'
 
-  spec.metadata["allowed_push_host"] = 'https://rubygems.org'
+  spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
-  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/atomecorp/atomize'
   spec.metadata['changelog_uri'] = 'https://github.com/atomecorp/atomize'
 
@@ -25,12 +25,11 @@ Gem::Specification.new do |spec|
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject do |f|
       (f == __FILE__) || f.match(%r{\A(?:(?:bin|test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
-
     end
   end
-  spec.bindir = "exe"
+  spec.bindir = 'exe'
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
