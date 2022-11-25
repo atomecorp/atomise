@@ -20,15 +20,14 @@ if ARGV.include?('install')
       FileUtils.copy_entry('../../../../vendor/assets/build/js/third_parties/', 'third_parties/')
     end
   end
-  Dir.chdir('../../../../') do
+  Dir.chdir('./atome') do
     `bundle update; bundle install`
     `gem build atome.gemspec`
     `gem install atome`
   end
-  # end
   if ARGV.include?('run')
     Dir.chdir('atome/') do
-      `rake test`
+      `rake test_browser`
     end
   end
 end
